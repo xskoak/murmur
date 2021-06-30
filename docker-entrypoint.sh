@@ -15,4 +15,6 @@ then
     sed -E -i "s/bandwidth=[0-9].+$/bandwidth=$BANDWIDTH/g" /etc/murmur.ini
 fi
 
+sed -E -i "s/uname=murmur/uname=root/g" /etc/murmur.ini
+
 murmurd -ini /etc/murmur.ini -fg
