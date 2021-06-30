@@ -12,4 +12,6 @@ FROM scratch
 
 COPY --from=builder / /
 
+USER murmur
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
