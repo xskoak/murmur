@@ -12,4 +12,4 @@ FROM scratch
 
 COPY --from=builder / /
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["/docker-entrypoint.sh"]
