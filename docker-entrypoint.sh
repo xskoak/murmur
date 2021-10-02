@@ -12,12 +12,12 @@ fi
 
 if ! [ -z ${SSLKEY+x} ];
 then
-    sed -E -i "s/\;sslKey=/sslKey=$SSLKEY/g" /etc/murmur.ini
+    sed -E -i "s/\;sslKey=/sslKey=\/$SSLKEY/g" /etc/murmur.ini
 fi
 
 if ! [ -z ${SSLCERT+x} ];
 then
-    sed -E -i "s/\;sslCert=/sslCert=$SSLCERT/g" /etc/murmur.ini
+    sed -E -i "s/\;sslCert=/sslCert=\/$SSLCERT/g" /etc/murmur.ini
 fi
 
 
